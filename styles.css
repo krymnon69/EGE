@@ -51,7 +51,7 @@ body {
 
 .container__contact {
   /* align-items: center; */
-  /* display: flex; */
+  display: flex;
   /* flex-grow: 1; */
 }
 
