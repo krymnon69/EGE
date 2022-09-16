@@ -6,35 +6,61 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>EGE</title>
+        <!-- display=swap - влияет на оптимизацию -->
+        <link href="https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900&display=swap&subset=cyrillic-ext" rel="stylesheet" />
   </head>
   <body>
     <div class="wrapper">
-        <div class="container">
-            <img class="container__img1" src="./icon/ege.png"></img>
-            <div class="button">
-                <a class="button__img1" href="index.html"
-                target="_blank">Главная</a>
-                <a class="button__img2" href="https://vk.com/id24426005"
-                target="_blank">О компании</a>
-                <a class="button__img3" href="https://vk.com/id24426005"
-                target="_blank">Каталог</a>               
-            </div>
-            <div class="info">
-                <img class="info__img1" src="./icon/phone.png"></img>
-                <label>+7 (965) 084-29-29</label>
-            </div>
-            <img class="container__img2" src="./icon/like.png"></img>    
-            <div class="info">
-                    <img class="info__img2" src="./icon/buying.png"></img>
-                    <label>Пусто</label>                   
-            </div>           
-        </div>
+        <header class="header">
+            <div class="header__container _container">
+                <ul class="header__line line">
+                    <li class="line__1">
+                        <img src="./icon/line.png"></img>
+                    </li>
+                    <li class="line__2">
+                        <img src="./icon/line.png"></img>
+                    </li>
+                </ul>
+                <div class="header__column">
+                    <a href="index.html"><img class="header__logo" src="./icon/ege.png"/></a>
+                    <nav class="header__menu menu">
+                        <ul class="menu__list">
+                            <li class="menu__item">
+                                <a href="index.html" class="menu__link">Главная</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="index.html" class="menu__link">О компании</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="index.html" class="menu__link">Каталог</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div> 
+                <div class="header__info info">
+                    <ul class="info__list">
+                        <li class="info__item">
+                            <img src="./icon/phone.png"></img>
+                            <label>+7 (965) 084-29-29</label>
+                        </li>
+                        <li class="info__item">
+                            <img src="./icon/like.png"></img>
+                        </li>
+                        <li class="info__item">
+                            <img src="./icon/buying.png"></img>
+                            <label>Пусто</label>
+                        </li>
+                    </ul>
+                </div>
+            </div>      
+        </header>
         <div class="content">
+<<<<<<< HEAD
             CONTENT
+=======
+>>>>>>> testing2.0
         </div>
-        
         <div class="footer">
-            FOTER
         </div>
     </div>
   </body>

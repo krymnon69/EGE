@@ -10,104 +10,170 @@
   border: 0;
   box-sizing: border-box;
 }
-
-body {
-  height: 100%;
-  margin: 0 auto;
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  max-width: 1920px;
-}
-
 a {
   text-decoration: none;
 }
-
+/* выравнивание изображение по верху */
 img {
   vertical-align: top;
 }
+ul,
+ol,
+li {
+  list-style: none;
+}
+/* принимает свойства родительского элемента (inherit) */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
 
+html,
+body {
+  height: 100%;
+  line-height: 1; /* устанавливает величину пространства между строками */
+  font-size: 16px;
+  color: #3c3c3b;
+  font-family: Inter;
+  font-weight: 600;
+}
+.wrapper {
+  min-height: 100%;
+  overflow: hidden; /*чтобы не вышел за границы */
+}
+/* ограничивающий контейнер для всего */
+._container {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.header__line {
+  line-height: 0.625;
+  height: 10px;
+  display: none;
+}
+/* обнуление стилей */
+/* ---------------------------------------------------------------------------- */
 /* Стили */
 
-.wrapper {
-  min-height: 100vh;
-  overflow: hidden; /*чтобы не вышел за границы */
-  display: flex;
-  flex-direction: column;
+.header {
+  /* position: absolute; */
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 50;
+  background-color: rgb(75, 86, 94);
 }
 
-.container {
-  max-width: 1319px;
-  margin: 0 auto;
-  /* flex elements подстраиваются на высоту друг друга (на макс высоту) */
-  align-items: stretch; /*нихуя не работает */
-  /* при прокрутке вниз останется вверху */
-  position: sticky;
-  /* border: 1px solid red; */
-  background-color: rgb(75, 86, 94);
+.header__container {
+  height: 80px;
+  display: flex;
+  min-height: 100%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.header__column {
+  display: flex;
+  align-items: center;
+  min-height: 100%;
+  /* align-items: center; */
+}
+
+.header__logo {
+  width: 70px;
+}
+
+.header__menu {
+  margin-left: 40px;
+}
+
+.menu__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  /* flex-grow: 1; */
-
-  /* height: 150px; */
 }
-.info,
-.info {
+
+.menu__item:not(:last-child) {
+  margin-right: 24px;
+}
+
+.menu__link {
+  color: #f9fafb;
+  /* line-height: 19px; в процентах: */
+  line-height: calc(19 / 16 * 100%);
+}
+
+.header__info {
   display: flex;
-  /* justify-content: right; */
+  flex-wrap: wrap;
   align-items: center;
+  /* align-self: stretch; */
 }
 
-.info {
-  /* align-items: center; */
+.info__list {
+  /* margin-left: 100px; */
+  min-height: 100%;
   display: flex;
-  /* flex-grow: 1; */
+  flex-wrap: wrap;
+  font-weight: 500;
 }
 
-.container__img1 {
-  width: 10%;
-  min-width: 93px;
-  max-width: 131px;
-  /* max-height: 40px; */
+.info__item:not(:last-child) {
+  margin-right: 24px;
+}
+.info__item:last-child {
+  margin: 0px;
 }
 
-.button {
-  flex-grow: 1;
-  margin: auto 15px;
-}
-
-.container__img2,
-.info {
-  margin: auto 15px;
-}
-
-.content {
+.info__item {
   display: flex;
-  flex: 1 1 auto;
-  border: 1px solid red;
-  justify-content: center;
+  flex-wrap: wrap;
+  margin-right: 24px;
+}
+
+.info__item img {
+  margin: auto;
+}
+
+.info__item label {
+  min-height: 100%;
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  /* align-self: center; */
+  color: #ffffff;
+  padding-left: 10px;
+  line-height: calc(19 / 16 * 100%);
 }
 
-.footer {
-  display: flex;
-  height: 100px;
-  justify-content: center;
-  align-items: center;
+@media (max-width: 1319px) {
 }
 
-@media only screen and (max-width: 659px) {
-  .button,
-  .container__img2,
-  .container label {
+@media (max-width: 767px) {
+  .info__item label,
+  .header__menu {
     display: none;
   }
-  .container {
-    justify-content: space-around;
+  .info__item:not(:last-child) {
+    display: none;
   }
-  .info {
-    order: -1;
-    flex-grow: 0;
+  .info__list label {
+    padding: 0;
+  }
+  .header__line {
+    display: block;
   }
 }
+/* body {
+  margin: 0 auto; 
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+   max-width: 1920px;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+} */
