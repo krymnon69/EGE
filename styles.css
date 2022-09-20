@@ -1,7 +1,7 @@
 /* flex: flex-grow, flex-shrink, flex-basis;  */
 /* flex-direction: column и space-between - для хедер и футер */
 
-/* обнуление стилей */
+/* обнуление стилей */ /* ---------------------------------------------------------------------------- */
 *,
 *::before,
 *::after {
@@ -42,15 +42,31 @@ body {
   font-family: Inter;
   font-weight: 600;
 }
+
+/* technical classes */ /* ---------------------------------------------------------------------------- */
+
 .wrapper {
   min-height: 100%;
   overflow: hidden; /*чтобы не вышел за границы */
+  display: flex;
+  flex-direction: column;
 }
 /* ограничивающий контейнер для всего */
 ._container {
   max-width: 1320px;
   margin: 0 auto;
 }
+._ibg {
+  position: relative;
+}
+.igb img {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 50;
+}
+
 /* убрать две линии */
 .header__line {
   line-height: 0.625;
@@ -62,9 +78,8 @@ body {
   line-height: 0.375;
   height: 10px;
 }
-/* обнуление стилей */
-/* ---------------------------------------------------------------------------- */
-/* Стили */
+
+/* Стили */ /* ---------------------------------------------------------------------------- */
 
 .header {
   /* position: absolute; */
@@ -288,3 +303,44 @@ body {
   display: flex;
   flex-direction: column;
 } */
+
+/* CONTENT /* ---------------------------------------------------------------------------- */
+.content {
+  display: flex;
+  flex: 1 1 auto;
+}
+
+.main-block {
+  position: relative;
+}
+.main-block__body {
+  /* padding: 1840px;
+  position: relative;
+  z-index: 2; */
+}
+.content__main-block {
+}
+.content__block__container {
+}
+.main-block__title {
+  position: absolute;
+  width: 543px;
+  height: 112px;
+  left: 300px;
+  top: 304px;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 140%;
+  /* mix-blend-mode: normal; */
+  color: #f0ba4e;
+  /* z-index: 100; */
+}
+
+.main-block__img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  mix-blend-mode: color-burn;
+}
