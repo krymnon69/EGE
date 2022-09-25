@@ -190,10 +190,11 @@ body {
   .header__line {
     display: block;
   }
+  .content__block__container {
+    transform: scale(0.4) translate(-75%, -75%);
+  }
 }
-._container_color {
-  /* background-color: #f0ba4e; */
-}
+
 .bheader__bottom {
   background: #f0ba4e;
   display: flex;
@@ -224,32 +225,19 @@ body {
   justify-content: space-between;
   width: 100%;
 }
-*/ .bheader__bottom ._container {
-  /* height: 55px; */
-  /* background: #f0ba4e; */
-}
-
-.line__1 {
-}
-.line__2 {
-}
-.line__3 {
-}
 .bheader__bottom_menu {
   display: flex;
   align-items: center;
   min-height: 100%;
 }
-.menu {
-}
+
 .menu__blist {
   display: flex;
   font-weight: 600;
   font-size: 14px;
   line-height: 17px;
 }
-.menu__item label {
-}
+
 .menu__blink {
   color: #3c3c3b;
 }
@@ -266,8 +254,7 @@ body {
 .header__point label {
   color: #ffffff;
 }
-.info {
-}
+
 .serching img {
   width: 24px;
   height: 24px;
@@ -294,16 +281,6 @@ body {
   margin: 0px 25.5px 0px 0px;
 }
 
-/* body {
-  margin: 0 auto; 
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-   max-width: 1920px;
-}
-.wrapper {
-  display: flex;
-  flex-direction: column;
-} */
-
 /* CONTENT /* ---------------------------------------------------------------------------- */
 .content {
   display: flex;
@@ -313,28 +290,6 @@ body {
 .main-block {
   position: relative;
 }
-.main-block__body {
-  /* padding: 1840px;
-  position: relative;
-  z-index: 2; */
-}
-.content__main-block {
-}
-.content__block__container {
-}
-.main-block__title {
-  position: absolute;
-  width: 543px;
-  height: 112px;
-  left: 300px;
-  top: 304px;
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 140%;
-  /* mix-blend-mode: normal; */
-  color: #f0ba4e;
-  /* z-index: 100; */
-}
 
 .main-block__img {
   position: absolute;
@@ -343,4 +298,35 @@ body {
   top: 0;
   left: 0;
   mix-blend-mode: color-burn;
+}
+.main-block__body img {
+  position: fixed;
+  width: 100%;
+}
+.main-block__img img {
+  position: fixed;
+  width: 60%;
+}
+.content__block__container {
+  position: static;
+}
+
+.main-block__title {
+  position: absolute;
+  min-width: 330px;
+  width: calc(543 / 1920 * 100%);
+  height: calc(112 / 720 * 100%);
+  left: calc(300 / 1920 * 100%);
+  bottom: calc(302 / 720 * 100%);
+  /* left: 100px; */
+  /* top: 50%; */
+  /* width: 543px;
+  height: 112px;
+  left: 300px;
+  top: 304px; */
+  font-weight: 700;
+  font-size: 40px;
+  /* font-size: 250%; */
+  line-height: 140%;
+  color: #f0ba4e;
 }
