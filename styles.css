@@ -285,39 +285,32 @@ body {
   margin: 0px 25.5px 0px 0px;
 }
 
-/* CONTENT /* ---------------------------------------------------------------------------- */
+/* CONTENT HEAD/* ---------------------------------------------------------------------------- */
 .content {
-  /* overflow: auto; */
   display: flex;
   flex-direction: column;
   flex: 1 1 auto;
-  /* max-height: 720px; */
-  /* flex-basis: 300px; */
-  /* min-height: 300px; */
+  /* justify-content: space-between; */
 }
 
 .content__main-block {
-  border: 3px solid red;
-  /* display: flex; */
-  flex: 1 1 auto;
-  /* flex-basis: 300px; */
-  /* max-height: 300px; */
-  /* justify-content: flex-start; */
-  /* max-width: 1920px; */
-  /* max-height: 720px; */
-  background-image: url("./head.png"), url("./icon/main_alpha.png");
-  background-blend-mode: color-burn;
-  background-repeat: no-repeat;
-  background-size: 100%, 55%;
-  /* background-attachment: local; */
-  /* align-items: center; */
-  /* align-self: center; */
+  position: relative;
 }
 
-.main-block {
-  position: relative;
-  /* min-height: 490px; */
-  /* max-height: 720px; */
+.main-block__img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  mix-blend-mode: color-burn;
+}
+
+.main-block__body img {
+  width: 100%;
+}
+.main-block__img img {
+  width: 55%;
 }
 
 .main-block__title {
@@ -327,10 +320,6 @@ body {
   line-height: 140%;
   color: #f0ba4e;
   min-width: 330px;
-  /* width: 543px;
-  height: 112px;
-  left: 300px;
-  top: 304px; */
   width: calc(543 / 1920 * 100%);
   height: calc(112 / 720 * 100%);
   left: calc(300 / 1920 * 100%);
@@ -338,37 +327,243 @@ body {
 }
 
 .content__info {
-  /* display: flex;
-  flex-wrap: wrap;
-  flex-direction: row; */
-  /* flex: 1 1 auto; */
-  /* justify-content: space-between; */
-  /* align-items: flex-start; */
-  /* padding: 0px; */
-  /* gap: 28px; */
   position: relative;
-  /* display: flex; */
   justify-content: space-between;
+  margin: 28px auto;
+}
+
+.content__list {
+  display: flex;
+  flex: 1 1 auto;
+  width: 100%;
 }
 
 .content__item {
-  /* max-width: 421px; */
-}
-.content__list {
   display: flex;
-  /* align-items: flex-start; */
-  /* justify-content: space-between; */
+  flex: 1 1 auto;
+  min-width: 421px;
+  align-items: center;
 }
-.content__item {
+
+.content__item:not(:last-child) {
+  margin-right: 28px;
+}
+
+.content__item img {
+  margin-right: 16px;
+}
+
+.item__text h1,
+h2 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #3c3c3b;
+  min-width: 333px;
+}
+
+.item__text h2 {
+  color: #a1a0a0;
+}
+
+/* CONTENT /* ---------------------------------------------------------------------------- */
+
+/* CARDFILE NUMBER */
+.number__list {
   display: flex;
-  /* align-items: flex-start; */
-  /* justify-content: space-between; */
+  justify-content: flex-end;
+  /* margin: 0 0 0 auto; */
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #a1a0a0;
+  margin-bottom: 16px;
 }
+.number__item:first-child {
+  font-weight: 600;
+  color: #f0ba4e;
+}
+.number__item:not(:last-child) {
+  margin-right: 16px;
+}
+/* CARDFILE NUMBER */
+
+/* CARDFILE ARROW */
+.cardfile__arrow {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  width: 178px;
+  height: 40px;
+  bottom: 16px;
+  right: 16px;
+}
+
+._arrow {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #f0ba4e;
+  border-radius: 80px;
+}
+
+.cardfile__arrow h3 {
+  margin-right: 10px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #3c3c3b;
+}
+.cardfile__arrow img {
+  margin: auto;
+}
+/* CARDFILE ARROW */
+
+/* общие стили */
+.cardfile__item h1 {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 34px;
+  color: #3c3c3b;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.product__item {
+  background-color: #ffffff;
+  overflow: hidden;
+}
+/* общие стили */
+
+/* CARDFILE PRODUCT */
+
+/* CARDFILE ONE */
+.cardfile__tool {
+  overflow: hidden;
+  position: relative;
+  background-color: #ffffff;
+  min-width: 421px;
+  max-width: 421px;
+  min-height: 428px;
+  max-height: 428px;
+}
+
+.cardfile__tool h1 {
+  width: 389px;
+  margin: 16px auto 0 auto;
+}
+
+._ibg__tool {
+  position: absolute;
+  width: 386px;
+  height: 386px;
+  top: 114px;
+}
+/* CARDFILE ONE */
+
+/* size block's */
+.product__item {
+  position: relative;
+  height: 200px;
+  width: 421px;
+}
+
+._ibg__item-1 {
+  position: absolute;
+  width: 279px;
+  height: 279px;
+}
+._ibg__item-2 {
+  position: absolute;
+  width: 209px;
+  height: 209px;
+}
+._ibg__item-3 {
+  position: absolute;
+  width: 245px;
+  height: 245px;
+}
+._ibg__item-4 {
+  position: absolute;
+  width: 189px;
+  height: 189px;
+}
+
+._ibg__tool img,
+._ibg__item-1 img,
+._ibg__item-3 img {
+  width: 88%;
+}
+._ibg__item-2 img,
+._ibg__item-4 img {
+  width: 100%;
+}
+/* size block's */
+
+.cardfile__item {
+  /* position: relative; */
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: space-between;
+  align-items: center;
+  width: 1320px;
+}
+
+.cardfile__product {
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 870px;
+  min-height: 428px;
+}
+
+/* position text and img*/
+.cardfile__product div:nth-child(1) h1 {
+  width: 91px;
+  margin: 16px 16px 0 auto;
+}
+.cardfile__product div:nth-child(2) h1 {
+  width: 231px;
+  margin: 16px auto 0 16px;
+}
+.cardfile__product div:nth-child(3) h1 {
+  width: 218px;
+  margin: 16px auto 0 16px;
+}
+.cardfile__product div:nth-child(4) h1 {
+  width: 336px;
+  margin: 16px auto 0 16px;
+}
+._ibg__item-1 {
+  top: 16px;
+}
+._ibg__item-2 {
+  left: 208px;
+  top: 60px;
+}
+._ibg__item-3 {
+  left: 205px;
+}
+._ibg__item-4 {
+  left: 17px;
+  top: 66px;
+}
+
+.cardfile__product div:nth-child(2) .cardfile__arrow,
+.cardfile__product div:nth-child(3) .cardfile__arrow {
+  left: 16px;
+  bottom: 16px;
+  /* right: auto; */
+}
+/* position text and img*/
 
 @media (max-width: 1319px) {
 }
 
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .info__item label,
   .header__menu {
     display: none;
