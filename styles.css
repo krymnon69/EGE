@@ -398,7 +398,6 @@ h2 {
   bottom: 16px;
   right: 16px;
 }
-
 ._arrow {
   display: flex;
   width: 40px;
@@ -406,7 +405,6 @@ h2 {
   border: 1px solid #f0ba4e;
   border-radius: 80px;
 }
-
 .cardfile__arrow h3 {
   margin-right: 10px;
   font-weight: 400;
@@ -429,7 +427,6 @@ h2 {
   left: 0;
   right: 0;
 }
-
 .product__item {
   background-color: #ffffff;
   overflow: hidden;
@@ -551,12 +548,10 @@ h2 {
   left: 17px;
   top: 66px;
 }
-
 .cardfile__product div:nth-child(2) .cardfile__arrow,
 .cardfile__product div:nth-child(3) .cardfile__arrow {
   left: 16px;
   bottom: 16px;
-  /* right: auto; */
 }
 /* position text and img*/
 
